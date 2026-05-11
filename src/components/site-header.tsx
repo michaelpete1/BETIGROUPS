@@ -1,6 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Group" },
@@ -12,9 +15,11 @@ const navItems = [
 ];
 
 export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-[rgba(255,248,237,0.92)] backdrop-blur-md">
-      <div className="container-x grid items-center gap-5 py-4 md:grid-cols-[auto_1fr_auto]">
+      <div className="container-x grid items-center gap-4 py-4 md:grid-cols-[auto_1fr_auto]">
         <Link href="/" className="group flex items-center gap-3">
           <Image
             src="/beti-group-logo.svg"
@@ -38,14 +43,54 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link
-          href="/contact"
-          className="inline-flex justify-self-start items-center gap-2 rounded-full bg-[#0c2240] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-[#112c52] md:justify-self-end"
-        >
-          Get in touch
-          <ArrowUpRight className="h-4 w-4" />
-        </Link>
+        <div className="flex items-center gap-2 justify-self-end">
+          <Link
+            href="/contact"
+            className="hidden items-center gap-2 rounded-full bg-[#0c2240] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-[#112c52] sm:inline-flex md:justify-self-end"
+          >
+            Get in touch
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-3 text-slate-900 shadow-sm transition hover:bg-slate-50 md:hidden"
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
+
+      {open ? (
+        <div className="border-t border-slate-200 bg-[rgba(255,248,237,0.98)] md:hidden">
+          <div className="container-x py-4">
+            <nav className="grid gap-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl px-4 py-3 text-base font-medium text-slate-700 transition hover:bg-white hover:text-slate-900"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <Link
+              href="/contact"
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0c2240] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-[#112c52]"
+              onClick={() => setOpen(false)}
+            >
+              Get in touch
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

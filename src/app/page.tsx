@@ -104,14 +104,14 @@ export default function HomePage() {
                 Beti Group • Holdings
               </div>
               <div className="space-y-2">
-                <h1 className="font-display text-6xl leading-[0.92] text-balance md:text-8xl lg:text-[6.5rem]">
+                <h1 className="font-display text-5xl leading-[0.95] text-balance sm:text-6xl md:text-8xl lg:text-[6.5rem]">
                   One group.
                   <br />
                   <span className="italic text-[#f1b548]">Many enterprises.</span>
                   <br />
                   Built in Nigeria.
                 </h1>
-                <p className="max-w-2xl text-lg leading-8 text-white/82 md:text-[1.35rem]">
+                <p className="max-w-2xl text-base leading-7 text-white/82 sm:text-lg md:text-[1.35rem]">
                   From farmland to factory floor, Beti Group brings together a
                   family of subsidiaries building products and services that
                   uplift Nigerian communities.
