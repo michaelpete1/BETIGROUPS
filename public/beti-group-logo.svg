@@ -1,0 +1,11 @@
+<svg width="320" height="88" viewBox="0 0 320 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="84" height="84" rx="20" fill="#0C2240"/>
+  <path d="M26 28H40.5C48.6 28 54 32.2 54 38.8C54 43.1 51.8 46.3 48.2 47.8C52.9 49.1 56 52.7 56 58.1C56 66.3 50 72 40.8 72H26V28Z" fill="#FFFFFF"/>
+  <path d="M35.5 34.2V43.5H40.2C44.2 43.5 46.6 41.6 46.6 38.8C46.6 36 44.2 34.2 40.2 34.2H35.5Z" fill="#0C2240"/>
+  <path d="M35.5 49.3V65H40.6C44.8 65 47.4 62.8 47.4 57.9C47.4 52.8 44.8 49.3 40.1 49.3H35.5Z" fill="#0C2240"/>
+  <path d="M62 31.5C62 28.7 64.1 26.5 67 26.5C69.9 26.5 72 28.7 72 31.5C72 34.4 69.9 36.5 67 36.5C64.1 36.5 62 34.4 62 31.5Z" fill="#FFFFFF"/>
+  <path d="M62 48.2C62 45.4 64.1 43.2 67 43.2C69.9 43.2 72 45.4 72 48.2C72 51.1 69.9 53.2 67 53.2C64.1 53.2 62 51.1 62 48.2Z" fill="#FFFFFF"/>
+  <path d="M62 64.8C62 62 64.1 59.8 67 59.8C69.9 59.8 72 62 72 64.8C72 67.7 69.9 69.8 67 69.8C64.1 69.8 62 67.7 62 64.8Z" fill="#FFFFFF"/>
+  <text x="100" y="39" fill="#0C2240" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" letter-spacing="0.5">BETI GROUP</text>
+  <text x="100" y="62" fill="#64748B" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="5">HOLDINGS • NIGERIA</text>
+</svg>
