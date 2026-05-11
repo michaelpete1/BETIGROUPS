@@ -19,14 +19,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-[rgba(255,248,237,0.92)] backdrop-blur-md">
-      <div className="container-x grid items-center gap-4 py-4 md:grid-cols-[auto_1fr_auto]">
+      <div className="container-x flex items-center justify-between gap-3 py-3 md:grid md:grid-cols-[auto_1fr_auto] md:gap-4 md:py-4">
         <Link href="/" className="group flex items-center gap-3">
           <Image
             src="/beti-group-logo.svg"
             alt="Beti Group"
             width={240}
             height={66}
-            className="h-10 w-auto"
+            className="h-8 w-auto sm:h-9 md:h-10"
             priority
           />
         </Link>
@@ -56,7 +56,7 @@ export function SiteHeader() {
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-3 text-slate-900 shadow-sm transition hover:bg-slate-50 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:bg-slate-50 md:hidden"
             onClick={() => setOpen((value) => !value)}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
